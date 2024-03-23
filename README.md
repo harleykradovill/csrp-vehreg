@@ -1,10 +1,8 @@
 # csrp-vehreg
 
-Script to register a vehicle to CSRP. Matches to the desired identities' SSN.
+Script to register a vehicle to CSRP. Matches to the current selected identity.
 
-Usage: /vehreg {SSN}
-
-Example: /vehreg 572-45-3425
+Usage: /vehreg
 
 Must be in vehicle to register it, duh.
 
