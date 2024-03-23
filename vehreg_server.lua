@@ -22,7 +22,7 @@ AddEventHandler('sendVehicleRegistration', function(plate, make, model, color)
 	    color = color
         }
 
-        print(json.encode(vehicleProps))
+        -- print(json.encode(vehicleProps))
 
         -- print("Sending vehicle registration request to website API...")
         PerformHttpRequest(cadURL, function(err, text, headers)

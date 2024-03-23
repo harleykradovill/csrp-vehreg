@@ -2,6 +2,12 @@ json = require("json")
 
 RegisterCommand('vehreg', function(source, args, rawCommand)
     local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
+
+    if not IsPedInAnyVehicle(PlayerPedId(), false) or vehicle == 0 then
+        drawNotification("Error: Not in Vehicle")
+        return
+    end
+
     local plate = GetVehicleNumberPlateText(vehicle)
     local make = GetLabelText(GetMakeNameFromVehicleModel(GetEntityModel(vehicle)))
     local model = GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle)))
